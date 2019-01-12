@@ -110,7 +110,7 @@ class Store {
         const books = Store.getBooks();
         // loop through array of books and remove the book with the passed parameter isbn record
         books.forEach((book, index) => {
-            if(book.isbn === isbn){
+            if(book.isbn.trim() == isbn.trim())){
                 books.splice(index, 1);
                 // console.log(books);
             }
